@@ -16,3 +16,14 @@ Pull requests to `main` run the lint and test job only (no deploy).
 
 ## Tech Stack
 HTML/CSS/JS, Git, GitHub Actions, GitHub Pages, HTMLHint
+
+## Live Site
+https://adewunmivictor5.github.io/automated-website-deploy/
+
+## Branching Strategy
+- `main`: production branch, auto-deployed to GitHub Pages
+- `develop`: integration branch
+- `feature/*`: new features, merged into `main` through a pull request
+
+## CI/CD Pipeline
+Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) → npm install → lint (HTMLHint) → test → upload Pages artifact → deploy to GitHub Pages.
